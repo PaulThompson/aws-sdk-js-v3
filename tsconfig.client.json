@@ -10,18 +10,13 @@
     "importHelpers": true,
     "noEmitHelpers": true,
     "incremental": true,
-    "resolveJsonModule": true,
-    "declarationDir": "./types",
-    "outDir": "dist/cjs"
+    "resolveJsonModule": true
   },
   "typedocOptions": {
-    "exclude": "**/node_modules/**",
     "excludedNotExported": true,
     "excludePrivate": true,
     "hideGenerator": true,
     "ignoreCompilerErrors": true,
-    "mode": "file",
-    "out": "./docs",
-    "plugin": "@aws-sdk/client-documentation-generator"
+    "mode": "file"
   }
 }
