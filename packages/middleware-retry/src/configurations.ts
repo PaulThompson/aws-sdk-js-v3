@@ -1,28 +1,29 @@
 import { RetryStrategy } from "@aws-sdk/types";
-import { ExponentialBackOffStrategy } from "./defaultStrategy";
+import { StandardRetryStrategy } from "./defaultStrategy";
 
 export interface RetryInputConfig {
   /**
-   * The maximum number of times requests that encounter potentially transient failures should be retried
+   * The maximum number of times requests that encounter retryable failures should be attempted.
    */
-  maxRetries?: number;
+  maxAttempts?: number;
   /**
    * The strategy to retry the request. Using built-in exponential backoff strategy by default.
    */
   retryStrategy?: RetryStrategy;
 }
+
 export interface RetryResolvedConfig {
-  maxRetries: number;
+  maxAttempts: number;
   retryStrategy: RetryStrategy;
 }
+
 export function resolveRetryConfig<T>(
   input: T & RetryInputConfig
 ): T & RetryResolvedConfig {
-  const maxRetries = input.maxRetries === undefined ? 3 : input.maxRetries;
+  const maxAttempts = input.maxAttempts === undefined ? 3 : input.maxAttempts;
   return {
     ...input,
-    maxRetries,
-    retryStrategy:
-      input.retryStrategy || new ExponentialBackOffStrategy(maxRetries)
+    maxAttempts,
+    retryStrategy: input.retryStrategy || new StandardRetryStrategy(maxAttempts)
   };
 }
