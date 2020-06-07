@@ -20,8 +20,8 @@
     "test:integration-legacy": "cucumber-js --fail-fast",
     "test:integration": "jest --config jest.config.integ.js --passWithNoTests",
     "test:protocols": "yarn build:protocols && lerna run test --scope '@aws-sdk/aws-*'",
-    "prepublishOnly": "tsc",
-    "pretest": "tsc -p tsconfig.json"
+    "tsc": "tsc",
+    "mtsc": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",

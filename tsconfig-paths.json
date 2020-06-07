@@ -1,31 +1,6 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "downlevelIteration": true,
-    "resolveJsonModule": true,
-    "experimentalDecorators": true,
-
-    "noUnusedParameters": false,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "declaration": true,
-    "allowUnreachableCode": false,
-    "pretty": true,
-
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "es5",
-    "lib": ["es2015", "dom"],
-    "outDir": "./build",
-
-    // "noImplicitAny": true,
-    // "sourceMap": true,
-    // "noUnusedLocals": true,
-    // "noImplicitReturns": true,
-    // "noImplicitThis": true,
-    // "alwaysStrict": true,
-
-    // "noFallthroughCasesInSwitch": true,
-
     "baseUrl": "./packages",
     "paths": {
       "@aws-sdk/abort-controller": ["abort-controller/src"],
@@ -135,7 +110,5 @@
       "@aws-sdk/util-utf8-universal": ["util-utf8-universal/src"],
       "@aws-sdk/xml-builder": ["xml-builder/src"]
     }
-  },
-  "include": ["packages/"],
-  "exclude": ["node_modules/"]
+  }
 }

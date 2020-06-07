@@ -1,22 +1,8 @@
 {
   "compilerOptions": {
-    "alwaysStrict": true,
-    "target": "es2017",
     "module": "commonjs",
-    "declaration": true,
-    "strict": true,
-    "sourceMap": true,
-    "downlevelIteration": true,
-    "importHelpers": true,
-    "noEmitHelpers": true,
-    "incremental": true,
-    "resolveJsonModule": true
+    "target": "es5",
+    "sourceMap": true
   },
-  "typedocOptions": {
-    "excludedNotExported": true,
-    "excludePrivate": true,
-    "hideGenerator": true,
-    "ignoreCompilerErrors": true,
-    "mode": "file"
-  }
+  "exclude": ["node_modules", "dist"]
 }
