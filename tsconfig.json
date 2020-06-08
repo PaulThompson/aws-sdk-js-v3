@@ -30,9 +30,10 @@
 
     "baseUrl": ".",
     "paths": {
-      "@aws-sdk/*": ["packages/*/src", "clients/*"]
+      "@aws-sdk/*": ["packages/*/src/"],
+      "@aws-sdk/clients-*": ["clients/clients-*/"]
     }
   },
   "include": ["packages/"],
-  "exclude": ["node_modules/"]
+  "exclude": ["node_modules/", "build/"]
 }

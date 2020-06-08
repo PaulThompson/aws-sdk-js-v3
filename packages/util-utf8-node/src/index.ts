@@ -1,7 +1,10 @@
 import { fromArrayBuffer, fromString } from "@aws-sdk/util-buffer-from";
+import { AccessAnalyzer } from "@aws-sdk/client-accessanalyzer";
 
 export function fromUtf8(input: string): Uint8Array {
   const buf = fromString(input, "utf8");
+
+  AccessAnalyzer;
 
   return new Uint8Array(
     buf.buffer,
