@@ -28,10 +28,162 @@
     // "alwaysStrict": true,
     // "noFallthroughCasesInSwitch": true,
 
+    /**
+     * We include all packages so that vscode picks up source.
+     */
     "baseUrl": ".",
     "paths": {
-      "@aws-sdk/*": ["packages/*/src/"],
-      "@aws-sdk/clients-*": ["clients/clients-*/"]
+      "@aws-sdk/clients-*": ["clients/clients-*/"],
+      "@aws-sdk/abort-controller": ["packages/abort-controller/src"],
+      "@aws-sdk/body-checksum-browser": ["packages/body-checksum-browser/src"],
+      "@aws-sdk/body-checksum-node": ["packages/body-checksum-node/src"],
+      "@aws-sdk/chunked-blob-reader": ["packages/chunked-blob-reader/src"],
+      "@aws-sdk/chunked-blob-reader-native": [
+        "packages/chunked-blob-reader-native/src"
+      ],
+      "@aws-sdk/chunked-stream-reader-node": [
+        "packages/chunked-stream-reader-node/src"
+      ],
+      "@aws-sdk/client-documentation-generator": [
+        "packages/client-documentation-generator/src"
+      ],
+      "@aws-sdk/config-resolver": ["packages/config-resolver/src"],
+      "@aws-sdk/credential-provider-cognito-identity": [
+        "packages/credential-provider-cognito-identity/src"
+      ],
+      "@aws-sdk/credential-provider-env": [
+        "packages/credential-provider-env/src"
+      ],
+      "@aws-sdk/credential-provider-imds": [
+        "packages/credential-provider-imds/src"
+      ],
+      "@aws-sdk/credential-provider-ini": [
+        "packages/credential-provider-ini/src"
+      ],
+      "@aws-sdk/credential-provider-node": [
+        "packages/credential-provider-node/src"
+      ],
+      "@aws-sdk/credential-provider-process": [
+        "packages/credential-provider-process/src"
+      ],
+      "@aws-sdk/eventstream-handler-node": [
+        "packages/xml-builder/eventstream-handler-node"
+      ],
+      "@aws-sdk/eventstream-marshaller": [
+        "packages/eventstream-marshaller/src"
+      ],
+      "@aws-sdk/eventstream-serde-browser": [
+        "packages/eventstream-serde-browser/src"
+      ],
+      "@aws-sdk/eventstream-serde-config-resolver": [
+        "packages/xml/eventstream-serde-config-resolver"
+      ],
+      "@aws-sdk/eventstream-serde-node": [
+        "packages/eventstream-serde-node/src"
+      ],
+      "@aws-sdk/eventstream-serde-universal": [
+        "packages/eventstream-serde-universal/src"
+      ],
+      "@aws-sdk/fetch-http-handler": ["packages/fetch-http-handler/src"],
+      "@aws-sdk/hash-blob-browser": ["packages/hash-blob-browser/src"],
+      "@aws-sdk/hash-node": ["packages/hash-node/src"],
+      "@aws-sdk/hash-stream-node": ["packages/hash-stream-node/src"],
+      "@aws-sdk/invalid-dependency": ["packages/invalid-dependency/src"],
+      "@aws-sdk/is-array-buffer": ["packages/is-array-buffer/src"],
+      "@aws-sdk/is-node": ["packages/is-node/src"],
+      "@aws-sdk/md5-js": ["packages/md5-js/src"],
+      "@aws-sdk/middleware-apply-body-checksum": [
+        "packages/middleware-apply-body-checksum/src"
+      ],
+      "@aws-sdk/middleware-bucket-endpoint": [
+        "packages/middleware-bucket-endpoint/src"
+      ],
+      "@aws-sdk/middleware-content-length": [
+        "packages/middleware-content-length/src"
+      ],
+      "@aws-sdk/middleware-eventstream": [
+        "packages/middleware-eventstream/src"
+      ],
+      "@aws-sdk/middleware-expect-continue": [
+        "packages/middleware-expect-continue/src"
+      ],
+      "@aws-sdk/middleware-header-default": [
+        "packages/middleware-header-default/src"
+      ],
+      "@aws-sdk/middleware-host-header": [
+        "packages/middleware-host-header/src"
+      ],
+      "@aws-sdk/middleware-location-constraint": [
+        "packages/middleware-location-constraint/src"
+      ],
+      "@aws-sdk/middleware-retry": ["packages/middleware-retry/src"],
+      "@aws-sdk/middleware-sdk-api-gateway": [
+        "packages/middleware-sdk-api-gateway/src"
+      ],
+      "@aws-sdk/middleware-sdk-ec2": ["packages/middleware-sdk-ec2/src"],
+      "@aws-sdk/middleware-sdk-glacier": [
+        "packages/middleware-sdk-glacier/src"
+      ],
+      "@aws-sdk/middleware-sdk-machinelearning": [
+        "packages/middleware-sdk-machinelearning/src"
+      ],
+      "@aws-sdk/middleware-sdk-rds": ["packages/middleware-sdk-rds/src"],
+      "@aws-sdk/middleware-sdk-route53": [
+        "packages/middleware-sdk-route53/src"
+      ],
+      "@aws-sdk/middleware-sdk-s3": ["packages/middleware-sdk-s3/src"],
+      "@aws-sdk/middleware-sdk-s3-control": [
+        "packages/middleware-sdk-s3-control/src"
+      ],
+      "@aws-sdk/middleware-sdk-sqs": ["packages/middleware-sdk-sqs/src"],
+      "@aws-sdk/middleware-sdk-transcribe-streaming": [
+        "packages/middleware-sdk-transcribe-streaming/src"
+      ],
+      "@aws-sdk/middleware-serde": ["packages/middleware-serde/src"],
+      "@aws-sdk/middleware-signing": ["packages/middleware-signing/src"],
+      "@aws-sdk/middleware-ssec": ["packages/middleware-ssec/src"],
+      "@aws-sdk/middleware-stack": ["packages/middleware-stack/src"],
+      "@aws-sdk/middleware-user-agent": ["packages/middleware-user-agent/src"],
+      "@aws-sdk/node-http-handler": ["packages/node-http-handler/src"],
+      "@aws-sdk/property-provider": ["packages/property-provider/src"],
+      "@aws-sdk/protocol-http": ["packages/protocol-http/src"],
+      "@aws-sdk/querystring-builder": ["packages/querystring-builder/src"],
+      "@aws-sdk/querystring-parser": ["packages/querystring-parser/src"],
+      "@aws-sdk/region-provider": ["packages/region-provider/src"],
+      "@aws-sdk/s3-request-presigner": ["packages/s3-request-presigner/src"],
+      "@aws-sdk/service-error-classification": [
+        "packages/service-error-classification/src"
+      ],
+      "@aws-sdk/sha256-tree-hash": ["packages/sha256-tree-hash/src"],
+      "@aws-sdk/shared-ini-file-loader": [
+        "packages/shared-ini-file-loader/src"
+      ],
+      "@aws-sdk/signature-v4": ["packages/signature-v4/src"],
+      "@aws-sdk/smithy-client": ["packages/smithy-client/src"],
+      "@aws-sdk/types": ["packages/types/src"],
+      "@aws-sdk/url-parser-browser": ["packages/url-parser-browser/src"],
+      "@aws-sdk/url-parser-node": ["packages/url-parser-node/src"],
+      "@aws-sdk/util-base64-browser": ["packages/util-base64-browser/src"],
+      "@aws-sdk/util-base64-node": ["packages/util-base64-node/src"],
+      "@aws-sdk/util-base64-universal": ["packages/util-base64-universal/src"],
+      "@aws-sdk/util-body-length-browser": [
+        "packages/util-body-length-browser/src"
+      ],
+      "@aws-sdk/util-body-length-node": ["packages/util-body-length-node/src"],
+      "@aws-sdk/util-buffer-from": ["packages/util-buffer-from/src"],
+      "@aws-sdk/util-create-request": ["packages/util-create-request/src"],
+      "@aws-sdk/util-format-url": ["packages/util-format-url/src"],
+      "@aws-sdk/util-hex-encoding": ["packages/util-hex-encoding/src"],
+      "@aws-sdk/util-locate-window": ["packages/util-locate-window/src"],
+      "@aws-sdk/util-uri-escape": ["packages/util-uri-escape/src"],
+      "@aws-sdk/util-user-agent-browser": [
+        "packages/util-user-agent-browser/src"
+      ],
+      "@aws-sdk/util-user-agent-node": ["packages/util-user-agent-node/src"],
+      "@aws-sdk/util-utf8-browser": ["packages/util-utf8-browser/src"],
+      "@aws-sdk/util-utf8-node": ["packages/util-utf8-node/src"],
+      "@aws-sdk/util-utf8-universal": ["packages/util-utf8-universal/src"],
+      "@aws-sdk/xml-builder": ["packages/xml-builder/src"]
     }
   },
   "include": ["packages/"],
